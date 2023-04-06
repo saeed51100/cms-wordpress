@@ -95,7 +95,7 @@ When you’re done, make sure to **Publish** the posts.
 Copy the `.env.local.example` file in this directory to `.env.local` (which will be ignored by Git):
 
 ```bash
-cp .env.local.example .env.local
+cp .env.local .env.local
 ```
 
 Then open `.env.local` and set `WORDPRESS_API_URL` to be the URL to your GraphQL endpoint in WordPress. For example: `https://myapp.wpengine.com/graphql`.
