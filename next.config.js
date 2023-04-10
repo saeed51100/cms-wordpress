@@ -8,13 +8,13 @@ if (!process.env.WORDPRESS_API_URL) {
 /** @type {import('next').NextConfig} */
 module.exports = {
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'http://localhost/test.raiatec.com/',
-        port: '',
-        pathname: '/uploads/**',
-      },
+    domains: [
+      process.env.WORDPRESS_API_URL.match(/(?!(w+)\.)\w*(?:\w+\.)+\w+/)[0], // Valid WP Image domain.
+      '0.gravatar.com',
+      '1.gravatar.com',
+      '2.gravatar.com',
+      'secure.gravatar.com',
+      'localhost'
     ],
   },
 }
